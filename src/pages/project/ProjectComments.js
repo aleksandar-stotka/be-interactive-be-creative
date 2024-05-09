@@ -62,7 +62,7 @@ function ProjectComments({ project }) {
               required
               onChange={(e) => setNewComment(e.target.value)}
               value={newComment}
-              className="w-full mt-1 p-2 bg-gray-700 text-white rounded"
+              className="w-full mt-1 p-2  text-dark rounded"
             ></textarea>
           </label>
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
