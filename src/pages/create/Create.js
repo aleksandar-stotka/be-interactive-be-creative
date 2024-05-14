@@ -19,7 +19,7 @@ const categories = [
 
 
 
-async function Create() {
+const Create  = () => {
   const history = useHistory();
   const { addDocument, response } = useFirestore("projects");
   const { documents } = useCollection("users");
@@ -35,8 +35,6 @@ async function Create() {
   const [assingnedUsers, setAssingnedUsers] = useState([]);
   const [formError, setFormError] = useState(null);
   const messagesEndRef = useRef(null);
-  const [thumbnail, setThumbnail] = useState(null);
-  const [thumbnailError, setThumbnailError] = useState(null);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     
@@ -55,20 +53,7 @@ async function Create() {
     }
   }, [documents]);
 
-  const handleFileChange = (e) => {
-    setThumbnail(null);
-    let selected = e.target.files[0];
-    if (!selected) {
-      setThumbnailError("Please select a file");
-      return;
-    }
-    if (!selected.type.includes("image")) {
-      setThumbnailError("Selected file must be an image");
-      return;
-    }
-    setThumbnailError(null);
-    setThumbnail(selected);
-  };
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -187,16 +172,7 @@ async function Create() {
               styles={{ menuPortal: (base) => ({ ...base, zIndex: 9999 }) }}
             />
           </label>
-          <label className="block mb-4">
-          <span className="text-gray-300">Profile Thumbnail:</span>
-          <input
-            required
-            type="file"
-            onChange={handleFileChange}
-            className="w-full mt-1 p-2 bg-gray-700 text-white rounded"
-          />
-          {thumbnailError && <div className="text-red-500 mt-2">{thumbnailError}</div>}
-        </label>
+          
         </div>
         {/* Submit Button */}
         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
