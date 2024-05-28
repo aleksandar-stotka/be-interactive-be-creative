@@ -26,7 +26,7 @@ const Create  = () => {
 
   const [users, setUsers] = useState([]);
 
-  const { user } = useAuthContext();
+  const { user } = useAuthContext();  
   
   const [name, setName] = useState("");
   const [details, setDetails] = useState("");
