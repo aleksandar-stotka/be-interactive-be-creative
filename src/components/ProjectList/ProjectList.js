@@ -13,7 +13,7 @@ function ProjectList({ projects = [] }) {
     .slice(indexOfFirstProject, indexOfLastProject);
     
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    setCurrentPage(pageNumber); 
   };
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(projects.length / projectsPerPage); i++) {
