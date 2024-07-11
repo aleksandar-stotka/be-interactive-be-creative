@@ -12,7 +12,7 @@ function ProjectList({ projects = [] }) {
     .sort((a, b) => b.createdAt.toDate() - a.createdAt.toDate()) // Sort by date
     .slice(indexOfFirstProject, indexOfLastProject);
     
-  const paginate = (pageNumber) => {i
+  const paginate = (pageNumber) => {
     setCurrentPage(pageNumber); 
   };
   const pageNumbers = [];
