@@ -25,10 +25,10 @@ export const useCollection = (collection, _query, _orderBy) => {
 
     const unsubscribe = ref.onSnapshot(
       //realtime listener
-      ///snapshot is the method , is gona fire function,
+      ///snapshot is the method , is gonna fire function,
       // every time snaphot back from firestore collection
       (snapshot) => {
-        //we want to cycle through the documents inside that snipeshot and update documents (setDocuments)
+        //we want to cycle through the documents inside that snapeshot and update documents (setDocuments)
         let results = []; ///there we want to update documents
         snapshot.docs.forEach((doc) => {
           //docs is array of documents on snapShot
