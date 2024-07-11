@@ -1,3 +1,4 @@
+ import { Link } from "react-router-dom/cjs/react-router-dom";
 const filterList = [
   "all",
   "mine",
@@ -28,6 +29,8 @@ function ProjectFilter({ currentFilter, changeFilter }) {
               {f}
             </button>
           ))}
+
+<Link className=" bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded " to="/">home</Link>
         </div>
       </nav>
     </div>
