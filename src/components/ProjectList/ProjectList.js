@@ -5,7 +5,7 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 function ProjectList({ projects = [] }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 6;
+  const projectsPerPage = 10;
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects
@@ -22,7 +22,7 @@ function ProjectList({ projects = [] }) {
 
   return (
     <>
-      <div className="flex justify-center mt-4 p-5  overflow-hidden">
+      <div className="flex justify-center mt-4 p-5  ">
         {pageNumbers.map((number) => (
           <button
             key={number}

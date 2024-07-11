@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import "./App.css";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Create from "./pages/create/Create";
 import Project from "./pages/project/Project";
@@ -19,7 +18,7 @@ import Navbar from "./components/navbar/Navbar";
 function App() {
   const { user, authIsReady } = useAuthContext();
   return (
-    <div className="bg-blue-500  h-screen">
+    <div className="bg-blue-500  ">
       
       {authIsReady && (
         <BrowserRouter>
