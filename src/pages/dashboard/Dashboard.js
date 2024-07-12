@@ -47,7 +47,6 @@ function Dashboard() {
           case "sales":
           case "mine":
           case "marketing":
-            console.log(document.category, currentFilter);
             return document.category === currentFilter;
         }
       })
@@ -61,7 +60,7 @@ function Dashboard() {
 
   },[])
   return (
-    <div className=" bg-blue-500 ">
+    <div className=" min-h-screen bg-blue-500">
       
       {error && <p className="error">{error}</p>}
       {documents && (

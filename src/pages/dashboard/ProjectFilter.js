@@ -1,4 +1,6 @@
- import { Link } from "react-router-dom/cjs/react-router-dom";
+// ProjectFilter.js
+import { Link } from "react-router-dom/cjs/react-router-dom";
+
 const filterList = [
   "all",
   "mine",
@@ -16,7 +18,7 @@ function ProjectFilter({ currentFilter, changeFilter }) {
   return (
     <div>
       <nav>
-        <div className='flex flex-col sm:flex-row gap-x-4 gap-y-2 items-center py-4 px-5  shadow-lg rounded-lg max-w-6xl mx-auto my-4'>
+        <div className='flex flex-col sm:flex-row gap-x-4 gap-y-2 items-center py-4 px-5 shadow-lg rounded-lg max-w-6xl mx-auto my-4'>
           <h1 className="text-blue-200 font-bold">Filter by:</h1>
           {filterList.map((f) => (
             <button
@@ -29,8 +31,7 @@ function ProjectFilter({ currentFilter, changeFilter }) {
               {f}
             </button>
           ))}
-
-<Link className=" bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded " to="/">home</Link>
+          <Link className="bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded" to="/">home</Link>
         </div>
       </nav>
     </div>

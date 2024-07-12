@@ -4,8 +4,8 @@ import { useState } from "react";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 function ProjectList({ projects = [] }) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1) ;
+  const projectsPerPage = 8;
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects
