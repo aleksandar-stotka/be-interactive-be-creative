@@ -38,7 +38,7 @@ function ProjectSummary({ project }) {
   };
 
   return (
-    <div className=" container   text-white p-6">
+    <div className=" container bg-blue   text-white p-6">
       <div className="max-w-4xl mx-auto bg-gray-800 p-5 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-2">{name}</h2>
         <p className="text-gray-400">By {project.createdBy.displayName}</p>
