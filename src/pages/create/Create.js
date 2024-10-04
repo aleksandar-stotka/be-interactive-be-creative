@@ -164,7 +164,7 @@ const Create  = () => {
           <label className="block text-gray-400 font-semibold mb-2">
             Assign To:
             <Select
-              menuPlacement="top"
+              menuPlacement="top"                         
               options={users}
               onChange={(option) => setAssingnedUsers(option)}
               isMulti
