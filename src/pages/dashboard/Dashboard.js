@@ -5,8 +5,6 @@ import ProjectList from "../../components/ProjectList/ProjectList";
 import ProjectFilter from "./ProjectFilter";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
-
-
 import OnlineUsers from "../../components/onlineUsers/OnlineUsers";
 function Dashboard() {
   const { documents, error } = useCollection("projects");
@@ -14,8 +12,6 @@ function Dashboard() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
-
 
   const [currentFilter, setCurrentFilter] = useState("all");
   const { user } = useAuthContext();
@@ -56,12 +52,10 @@ function Dashboard() {
     setCurrentFilter(newFilter);
   };
   useEffect(() => {
-    scrollToBottom()
-
-  },[])
+    scrollToBottom();
+  }, []);
   return (
     <div className=" min-h-screen bg-blue-500">
-      
       {error && <p className="error">{error}</p>}
       {documents && (
         <ProjectFilter
@@ -70,50 +64,10 @@ function Dashboard() {
           changeFilter={changeFilter}
         />
       )}
-            
 
-      <div className="grid lg:grid-cols-3 ..
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      gap-5">
-        
-        <div className="col-span-2">{projects && <ProjectList projects={projects} />}</div>
-
-        <div className="col-span-1">
-          <OnlineUsers />
+        <div className="col-span-2 container ">
+          {projects && <ProjectList projects={projects} />}
         </div>
-      </div>
     </div>
   );
 }
