@@ -156,7 +156,7 @@ const Create  = () => {
               onChange={(option) => setCategory(option)}
               options={categories}
               className="text-black mt-1"
-            />
+            /> 
           </label>
         </div>
         {/* Assigned Users */}
