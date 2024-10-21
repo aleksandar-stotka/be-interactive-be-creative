@@ -41,10 +41,8 @@ const UserProjects = () => {
               Due by: {project.dueDate.toDate().toDateString()}
             </p>
             <div>
-              <ul>
-                <h2 className="text-dark-500 font-bold">
-                  Assigned Users List:
-                </h2>
+              <h2 className="text-dark-500 font-bold">Assigned Users List:</h2>
+              <ul className="flex flex-row space-x-4	">
                 {project.assingnedUsersList.map((user) => {
                   return (
                     <div key={user.id}>
