@@ -43,7 +43,7 @@ function ProjectSummary({ project }) {
         <h2 className="text-2xl font-bold mb-2">{name}</h2>
         <p className="text-gray-400">By {project.createdBy.displayName}</p>
         <p className="text-blue-300">
-          Project due by {project.dueDate.toDate().toDateString()}
+          Project due by {project.dueDate.toDate().toDateString()}    
         </p>
         <p className="mt-2">{details}</p>
 

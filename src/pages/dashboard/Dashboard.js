@@ -55,7 +55,8 @@ function Dashboard() {
     scrollToBottom();
   }, []);
   return (
-    <div className=" min-h-screen bg-blue-500">
+    <main>
+ <div className=" min-h-screen bg-blue-500">
       {error && <p className="error">{error}</p>}
       {documents && (
         <ProjectFilter
@@ -69,6 +70,8 @@ function Dashboard() {
           {projects && <ProjectList projects={projects} />}
         </div>
     </div>
+    </main>
+   
   );
 }
 
